@@ -1,0 +1,44 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #272829;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 300px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-signin h1 {
+  color: #fff;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="text"] {
+  margin-bottom: -1px;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+}
+
+#submit {
+  color: rgb(0, 0, 0);
+  background: rgb(17, 199, 159);
+}
+
+#submit a:hover {
+  color: rgb(255, 255, 255);
+}
