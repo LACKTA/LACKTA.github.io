@@ -195,15 +195,16 @@ body {
   
   .section-title p {
     font-size: 20px;
+    text-align: justify;
   }
   
   /*--------------------------------------------------------------
   # About
   --------------------------------------------------------------*/
   .about .content h3 {
-    margin-top: 50px;
+    margin-top: 30px;
     font-weight: 500;
-    font-size: 48px;
+    font-size: 45px;
     color: rgb(17, 199, 159);
   }
   
@@ -222,14 +223,13 @@ body {
   .about .content ul li {
     margin-bottom: 20px;
     display: flex;
-    align-items: center;
   }
   .about .content ul strong {
     margin-right: 10px;
     font-size: 20px;
   }
   .about .content ul span {
-    margin-right: 10px;
+    margin-right: 0px;
     font-size: 18px;
   }
   .about .content ul i {
@@ -352,12 +352,7 @@ body {
   #footer .copyright {
     text-align: center;
   }
-  #footer .credits {
-    padding-top: 5px;
-    text-align: center;
-    font-size: 13px;
-    color: #eaebf0;
-  }
+  
   @media (max-width: 1199px) {
     #footer {
       position: static;
