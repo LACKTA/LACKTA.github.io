@@ -36,7 +36,7 @@
         <label for="floatingPassword">Password</label>
       </div>
       <button class="w-100 btn-lg" id="submit" type="submit"><a>Sign in</a></button>
-      <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+      <p class="mt-5 mb-3 text-muted">&copy; Login to CV-Tussawan</p>
     </form>
 
   </main>
@@ -45,38 +45,8 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
 
+  <script src="assets/js/js.js"></script>
+
 </body>
 
 </html>
-
-<script>
-  var i = 1;
-  function reset() {
-    //document.getElementById('floatingInput').value='';
-    //document.getElementById('floatingPassword').value='';
-    document.getElementById("reset").reset();
-  }
-  document.querySelector('form').onsubmit = function () {
-    const username = document.querySelector('#floatingInput').value;
-    const password = document.querySelector('#floatingPassword').value;
-
-    if (i == 5) {
-      const submit = document.querySelector('#submit');
-      alert('Connection Error');
-      submit.disabled = true;
-      return false;
-
-    } else {
-      if (username == "admin" && password == "1234") {
-        window.location.href = 'index.html';
-        return false;
-
-      } else {
-        alert('Username or Password is incorrect. Please try again, ' + String(5 - i) + ' time left.');
-        reset();
-        i++;
-        return false;
-      }
-    }
-  }
-</script>
