@@ -2,7 +2,7 @@ body {
     font-family: 'Patrick Hand', cursive;
     color: #272829;
   }
-  
+
   /*--------------------------------------------------------------
   # Header
   --------------------------------------------------------------*/
@@ -12,25 +12,22 @@ body {
     left: 0;
     bottom: 0;
     width: 300px;
-    transition: all ease-in-out 0.5s;
+    transition: all 0.5s ease-out;
     z-index: 9997;
-    transition: all 0.5s;
     padding: 0 15px;
     background: #040b14;
-    overflow-y: auto;
   }
   #header .profile img {
     margin: 30px auto;
     display: block;
     width: 120px;
-    border: 8px solid rgb(10, 43, 36);
+    box-shadow: 0px 0px 20px rgb(156, 156, 156);
   }
   #header .profile h1 {
     font-size: 24px;
     margin: 0;
     padding: 0;
     font-weight: 600;
-    -moz-text-align-last: center;
     text-align-last: center;
   }
   #header .profile h1 a {
@@ -87,10 +84,7 @@ body {
     padding: 0;
     list-style: none;
   }
-  .nav-menu > ul > li {
-    position: relative;
-    white-space: nowrap;
-  }
+
   .nav-menu a, .nav-menu a:focus {
     display: flex;
     align-items: center;
@@ -112,7 +106,84 @@ body {
   .nav-menu a:hover i, .nav-menu .active i, .nav-menu .active:focus i, .nav-menu li:hover > a i {
     color: rgb(17, 199, 159);
   }
-  
+
+   /*--------------------------------------------------------------
+  # Navigation Mobile Menu
+  --------------------------------------------------------------*/
+  @media (min-width: 1199px) {
+    #nav {
+      display: none;
+    }
+  }
+
+  #nav {
+    display: flexbox;
+    background: #494949;
+    padding: 0;
+    margin: 0;
+  }
+
+  #nav a {
+    display: flexbox;
+    background: #494949;
+    padding: 0;
+    margin: 0;
+  }
+
+  #nav button {
+    display: block;
+    padding: 5px 17px;
+    margin: 5px 0px;
+    color: rgb(255, 255, 255);
+    background: #3b3939;
+    font-size: 9px;
+  }
+
+  #nav ul {
+    font-size: 20px;
+    text-align: justify;
+    background: #494949;
+  }
+
+  #nav ul a {
+    display: block;
+    color: #808080;
+    padding: 5px 22px;
+    margin-bottom: 5px;
+  }
+
+  #nav ul a span {
+    display: line;
+    color: #a5c09e;
+    padding: 5px 20px;
+    font-size: 16px;
+  }
+
+  #nav a:hover, #nav ul li a:hover {
+    color: rgb(17, 199, 159);
+  }
+
+  #nav .social a {
+    font-size: 18px;
+    display: inline-block;
+    background: #212431;
+    color: #fff;
+    line-height: 1;
+    padding: 6px 0;
+    margin-right: 3px;
+    border-radius: 50%;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    transition: 0.3s;
+  }
+
+  #nav .social a:hover {
+    background: rgb(17, 199, 159);
+    color: #fff;
+    text-decoration: none;
+  }
+
   /*--------------------------------------------------------------
   # home Section
   --------------------------------------------------------------*/
@@ -120,13 +191,8 @@ body {
     width: 100%;
     height: 100vh;
     background: url("../img/new1.jpg") top center;
-    background-size: home;
   }
-  #home .home-container {
-    position: relative;
-    z-index: 2;
-    min-width: 300px;
-  }
+
   #home h1 {
     margin: 0 0 10px 0;
     font-family: 'Stick No Bills', sans-serif;
@@ -181,7 +247,8 @@ body {
     position: relative;
     color: #173b6c;
   }
-  
+
+  /* สร้างเส้นใต้หัวข้อ */
   .section-title h2::after {
     content: "";
     position: absolute;
@@ -268,7 +335,6 @@ body {
   .skills .progress-bar {
     width: 1px;
     height: 10px;
-    transition: 0.9s;
     background-color: rgb(17, 199, 159);
   }
   
@@ -289,8 +355,9 @@ body {
     margin-bottom: 20px;
     color: #050d18;
   }
+  /* สร้างเส้น */
   .resume .resume-item {
-    padding: 0 0 20px 20px;
+    padding: 0 0 0px 20px;
     margin-top: -2px;
     border-left: 2px solid rgb(17, 199, 159);
     position: relative;
@@ -320,17 +387,15 @@ body {
   .resume .resume-item ul li span {
     font-size: 18px;
   }
-  .resume .resume-item:last-child {
-    padding-bottom: 0;
-  }
+/* สร้างจุดกลม และต้องใส่เนื้อหาไม่งั้นไม่มีจุดขึ้น*/
   .resume .resume-item::before {
-    content: "";
+    content: "";        
     position: absolute;
     width: 16px;
     height: 16px;
     border-radius: 50px;
     left: -9px;
-    top: 0;
+    top: 0px;
     background: #fff;
     border: 2px solid rgb(17, 199, 159);
   }

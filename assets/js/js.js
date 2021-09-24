@@ -2,6 +2,7 @@ var i = 1;
 function reset() {
   document.getElementById("reset").reset();
 }
+
 document.querySelector('form').onsubmit = function () {
   const username = document.querySelector('#floatingInput').value;
   const password = document.querySelector('#floatingPassword').value;
